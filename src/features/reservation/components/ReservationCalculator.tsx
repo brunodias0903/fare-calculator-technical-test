@@ -92,19 +92,41 @@ export function ReservationCalculator() {
           >
             Acomodação
           </label>
-          <select
-            id="accommodationId"
-            name="accommodationId"
-            value={formState.accommodationId}
-            onChange={handleChange}
-            className={inputClasses}
-          >
-            {ACCOMMODATIONS.map((accommodation) => (
-              <option key={accommodation.id} value={accommodation.id}>
-                {accommodation.name} • {accommodation.minNights}+ noites
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <select
+              id="accommodationId"
+              name="accommodationId"
+              value={formState.accommodationId}
+              onChange={handleChange}
+              className={`${inputClasses} appearance-none pr-12`}
+            >
+              {ACCOMMODATIONS.map((accommodation) => (
+                <option
+                  key={accommodation.id}
+                  value={accommodation.id}
+                  className="bg-white text-slate-900"
+                >
+                  {accommodation.name} • {accommodation.minNights}+ noites
+                </option>
+              ))}
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-slate-200">
+              <svg
+                aria-hidden
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+              >
+                <path
+                  d="M6 8l4 4 4-4"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
