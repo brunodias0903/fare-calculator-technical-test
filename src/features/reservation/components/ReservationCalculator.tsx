@@ -39,6 +39,9 @@ export function ReservationCalculator() {
   const handleChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const { name, value } = event.target
+      if (name === 'adults' && !/^\d*$/.test(value)) {
+        return
+      }
       setFormState((prev) => ({ ...prev, [name]: value }))
     },
     [],
@@ -175,6 +178,9 @@ export function ReservationCalculator() {
             <input
               type="number"
               min={1}
+              step={1}
+              inputMode="numeric"
+              pattern="[0-9]*"
               id="adults"
               name="adults"
               value={formState.adults}
