@@ -23,6 +23,10 @@ yarn build      # build de produção
 
 Commits locais passam por `lint-staged` via Husky (`pre-commit`) **e** por `yarn test:coverage`. A cobertura é calculada somente sobre `src` e o commit falha automaticamente se linhas/declarações/funções ficarem abaixo de 80%.
 
+## Deploy
+
+O projeto está disponível publicamente via Vercel em: https://fare-calculator-technical-test.vercel.app/
+
 ## Regras implementadas
 
 - Suíte Jardim (R$ 300/noite, mínimo 2 noites, limpeza R$ 80).
