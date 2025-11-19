@@ -77,7 +77,7 @@ export function ReservationCalculator() {
   }, [])
 
   const inputClasses =
-    'w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-base text-white placeholder:text-slate-400 transition focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-400/30'
+    'w-full min-w-0 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-base text-white placeholder:text-slate-400 transition focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-400/30'
 
   return (
     <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
@@ -144,7 +144,7 @@ export function ReservationCalculator() {
               value={formState.checkIn}
               onChange={handleChange}
               required
-              className={inputClasses}
+              className={`${inputClasses} date-input`}
             />
           </div>
           <div className="space-y-1.5">
@@ -162,7 +162,7 @@ export function ReservationCalculator() {
               onChange={handleChange}
               required
               min={formState.checkIn}
-              className={inputClasses}
+              className={`${inputClasses} date-input`}
             />
           </div>
           <div className="space-y-1.5 md:col-span-2 lg:col-span-1">
