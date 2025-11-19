@@ -1,6 +1,6 @@
 # Calculadora de Tarifário Hospedin
 
-Mini aplicação em React para o desafio técnico da Hospedin. A especificação completa pode ser consultada na Basecamp: [Desafio Técnico: Calculadora de Tarifário](https://public.3.basecamp.com/p/qErksnFvE8k9kjf29TP2Qb77). Em resumo:
+Mini aplicação em React para o desafio técnico da Hospedin. A especificação completa pode ser consultada na Basecamp: Desafio Técnico: Calculadora de Tarifário. Em resumo:
 
 - **Contexto:** tarifários definem quanto o hóspede paga por sua estadia e podem incluir regras de estadia mínima, valores diferenciados e descontos de longa permanência.
 - **Objetivo:** construir uma calculadora em React que permita selecionar a acomodação, definir check-in/check-out, informar adultos e obter o resumo do valor total (nome da acomodação, noites, diárias, taxa de limpeza e total). Deve validar períodos inválidos ou inferiores ao mínimo de noites.
