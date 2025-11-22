@@ -11,16 +11,19 @@ Mini aplicação em React para o desafio técnico da Hospedin. A especificação
 ## Como rodar
 
 ### Pré-requisitos
+
 - Node.js >= 18
 - Yarn (Classic). A instalação de dependências já executa o `prepare` que habilita o Husky.
 
 ### Ambiente de desenvolvimento
+
 ```bash
 yarn install
 yarn dev        # inicia o Vite em http://localhost:5173
 ```
 
 ### Testes, qualidade e build
+
 ```bash
 yarn lint          # ESLint com regras type-checked
 yarn format        # Prettier nos arquivos de código/estilo
@@ -30,6 +33,7 @@ yarn test:e2e      # smoke/E2E com Playwright (sobe o Vite automaticamente)
 yarn build         # build de produção
 yarn preview       # serve o build localmente
 ```
+
 - Para rodar o E2E pela primeira vez instale os browsers do Playwright: `npx playwright install` (ou `npx playwright install --with-deps` no Linux).
 - Commits locais passam por `lint-staged` via Husky (`pre-commit`) **e** por `yarn test:coverage`. A cobertura é calculada somente sobre `src` e o commit falha automaticamente se linhas/declarações/funções ficarem abaixo de 80%.
 
